@@ -2,18 +2,20 @@ const React = require('react');
 const Layout = require('./Layout');
 const Header = require('./Header');
 
-function userPage({ title, user, comments }) {
+function userPage({
+  title, user, comments, userName,
+}) {
   return (
     <Layout title={title}>
       <Header user={user} />
       <main role="main">
         <div className="containerInputUser">
-          {/* <h3 className="tea__title">
+          <h3 className="tea__title">
             Добро пожаловать,
             {' '}
-            {`${comments[0]['User.login']}`}
+            {`${user.login}`}
             !
-          </h3> */}
+          </h3>
           <h6 className="tea__title">Ваши последние комментарии</h6>
 
           <ul className="list-group">
